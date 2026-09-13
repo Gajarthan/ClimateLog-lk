@@ -1,205 +1,150 @@
+<div align="center">
+
 # ClimateLog LK
 
-A local data collection and reporting pipeline. Original reports are archived by
-SHA-256; SQLite records processing attempts, observation versions, and explicitly
-selected corrections. JSON, TSV, charts, and Markdown reports are produced from
-one consistent observation snapshot.
+### Sri Lanka · Weather observation dashboard
 
-## Install
+**[Weather snapshot](#weather-snapshot) · [Data quality](#data-quality) · [Station readings](#station-readings) · [Operating guide](docs/OPERATIONS.md)**
 
-Python 3.11 is the tested baseline. From this directory:
+</div>
 
-```powershell
-python -m venv .venv
-.venv/Scripts/python.exe -m pip install -r requirements.txt
-.venv/Scripts/python.exe -m pytest -q
-```
+---
 
-On Linux use `.venv/bin/python` in place of `.venv/Scripts/python.exe`.
-`requirements.lock` pins the runtime and offline test dependencies tested on
-Windows. The CI matrix also defines Linux validation; it has not been run here.
-An installed package works outside the source directory without `PYTHONPATH`.
+## Weather snapshot
 
-The core package uses only the standard library. For a minimal installation use
-`python -m pip install .`; add `.[pdf]` for PDFs, `.[charts]` for charts, and
-`.[browser]` for official-site discovery. The pinned setup above includes all
-three and pytest. Discovery needs Firefox and an available geckodriver; Selenium
-may download a driver on its first run. Camelot uses its bundled PDFium backend.
-Optional historical Google discovery uses `.[archives]`. Old geocoding maintenance
-scripts use `.[maintenance]` and `GMAPS_API_KEY`.
+**Report: 2026-09-12 · Period ending 08:30 SLST**
 
-## Run
+Captured 13 Sep 2026 · 01:13 SLST from the Department of Meteorology.
 
-After activating the virtual environment, use:
+> This is a published snapshot, not a live feed. The date above identifies the data shown. Collection and README refresh are not scheduled.
 
-```powershell
-python -m weather_lk init
-python -m weather_lk ingest --file tests/data/20240222.pdf
-python -m weather_lk export
-python -m weather_lk status
-python -m weather_lk run
-```
+| Reporting stations | Highest rainfall | Highest maximum | Lowest minimum |
+| :---: | :---: | :---: | :---: |
+| **60** | **24.1 mm** | **38.9 °C** | **12.6 °C** |
+| In this report | Bandarawela | Polonnaruwa | Nuwara Eliya |
 
-`run` discovers the official report, downloads, parses, and exports in order.
-`ingest --url URL` accepts an explicit report URL; repeat `--file` or `--url` to
-process multiple reports. `--download-only` archives PDFs for later processing.
-Use `export --no-charts` or `run --no-charts` when charts are unnecessary.
-Historical discovery is explicit: `ingest --source wayback` or `--source google`.
+[Download observations](docs/dashboard/snapshot.json) · [View archived source PDF](docs/dashboard/report.pdf) · [Official source](https://meteo.gov.lk/)
 
-The default data root is `var/weather_lk` under the current working directory.
-For repeatable operation, set `WEATHER_DATA_DIR` to an absolute directory on
-persistent local disk, or pass `--data-dir PATH` **before** the command:
+### Rainfall
 
-```powershell
-python -m weather_lk --data-dir D:/weather-data run
-```
+![Top ten stations by reported rainfall](docs/dashboard/rainfall.png)
 
-The manual wrapper uses the project-local data root unless configured:
+Station measurements in millimetres. These values are not a regional rainfall total.
 
-```powershell
-.\workflows\_pipeline_manual.ps1 -DataDirectory D:/weather-data
-```
+### Temperature
 
-Command results are JSON on stdout; diagnostic logs go to stderr. Exit codes:
-`0` completed, `1` partial success/review needed or stale data after `run`,
-`2` fatal error. `status` is a readout, so inspect its `stale` field when monitoring.
-A successful offline ingest of an old report does not mean the data is fresh.
-The ingestion run history records collection/parse outcomes; the `run` response
-also includes export and freshness results. Export failures return exit code 2.
+![Daily minimum and maximum temperatures by station](docs/dashboard/temperature.png)
 
-## Storage and corrections
+Each line connects one station's daily minimum and maximum. Only stations with both readings are shown.
 
-```text
-weather.sqlite3           observations, attempts, leases, and source metadata
-raw/<hash-prefix>/       original PDF or legacy JSON bytes
-exports/<export-id>/     complete reports and per-station files
-exports/current.json     manifest pointing to the last completed export
-backups/<backup-id>/     database snapshot, referenced sources, backup manifest
-```
+## Data quality
 
-Raw files are checked against their hashes before parsing and during backup or
-restore. Never edit them in place. Repeated successful processing of the same
-bytes with the same parser version is a no-op. Failed attempts remain visible:
+| Measure | Available | Missing |
+| --- | ---: | ---: |
+| Rainfall | 60 / 60 | 0 |
+| Minimum temperature | 24 / 60 | 36 |
+| Maximum temperature | 24 / 60 | 36 |
+| Paired temperatures | 24 / 60 | 36 |
 
-```powershell
-python -m weather_lk reprocess --failed
-python -m weather_lk status
-python -m weather_lk accept --attempt 12
-python -m weather_lk export
-```
+**1 trace-rain readings** · **14 unresolved station identities** · **44 rows with unverified historical coordinates**
 
-The attempt number is an example: inspect candidates before accepting one.
-Different values for an existing station/date are preserved for review and do
-not automatically replace selected values. `accept` selects all validated rows
-from that attempt. A single ingestion lease prevents concurrent collection;
-expired leases and interrupted attempts recover on later runs. Production
-collection/parsing workers have a deadline and their process trees are terminated
-on timeout. Cleanup can take a short grace period after the deadline. Export
-rendering runs after ingestion and is bounded by the scheduler's execution limit.
+Missing readings are shown as **—**. Zero is a measured value; **Trace** is retained separately. Coverage describes this report, not the entire national station network. Station and coordinate flags remain available in the observation download. No location map is shown because coordinate verification is incomplete.
 
-## Import an existing archive
+## Station readings
 
-Keep the old archive and use a separate destination directory:
+<details>
+<summary><strong>Open all 60 station readings</strong></summary>
 
-```powershell
-python -m weather_lk --data-dir D:/weather-new import-legacy --source D:/weather-old --dry-run
-python -m weather_lk --data-dir D:/weather-new import-legacy --source D:/weather-old
-```
+| Station | Rain (mm) | Minimum (°C) | Maximum (°C) |
+| --- | ---: | ---: | ---: |
+| . Dellawa TF (ARG) | 1.0 | — | — |
+| . Menikkanda TF (ARG) | 11.5 | — | — |
+| Alampil (ARG) | 18.0 | — | — |
+| Anuradhapura | 0.0 | 25.8 | 36.6 |
+| Ayr Estate (ARG) | 1.0 | — | — |
+| Badulla | 0.0 | 19.5 | 32.4 |
+| Bandaragama | 10.6 | — | — |
+| Bandaragama (ARG) | 11.0 | — | — |
+| Bandarawela | 24.1 | 17.5 | 28.7 |
+| Batticaloa | 0.0 | 27.0 | 34.1 |
+| Benthotawatta | 14.6 | — | — |
+| Bowatenna | 0.0 | — | — |
+| Canyon | 0.0 | — | — |
+| Castlereigh | 0.0 | — | — |
+| Colombo | 1.1 | 26.6 | 32.6 |
+| Colombo Fort | 2.1 | — | — |
+| Devitura Estate (ARG) | 2.5 | — | — |
+| Galle | 0.0 | 27.9 | 30.5 |
+| Halwathura Estate (ARG) | 3.5 | — | — |
+| Hambantota | 0.0 | 26.7 | 31.6 |
+| Hilpanakandura | 2.4 | — | — |
+| Hiniduma | 1.0 | — | — |
+| Inginiyagala | 0.0 | — | — |
+| Jaffna | 0.0 | 27.7 | 34.3 |
+| Kalatuwawa | 1.0 | — | — |
+| Katugastota | 0.0 | 20.7 | 31.8 |
+| Katunayake | 0.0 | 25.9 | 32.5 |
+| Kesbewa (ARG) | 1.0 | — | — |
+| Keselhenawa (ARG) | 1.5 | — | — |
+| Kotmale | 0.0 | — | — |
+| Kukuleganaga | 1.0 | — | — |
+| Kurunegala | 0.0 | 26.0 | 34.3 |
+| Labugama | 2.7 | — | — |
+| Laxapana | 0.0 | — | — |
+| Mahailluppallama | 0.0 | 24.6 | 35.5 |
+| Mannar | 0.0 | 26.5 | 31.6 |
+| Maskeliya (DOM) | 0.0 | — | — |
+| Mathugama | 6.5 | — | — |
+| Mattala | 0.0 | 24.8 | 36.5 |
+| Maussakele | 0.0 | — | — |
+| Moneragala | 0.0 | 23.7 | 36.9 |
+| Morapitiya (ARG) | 3.5 | — | — |
+| Mullaitivu | 13.4 | 25.6 | 37.9 |
+| Norton | 0.0 | — | — |
+| Nuwara Eliya | 0.0 | 12.6 | 22.3 |
+| Palanda(ARG) | 3.5 | — | — |
+| Polonnaruwa | 0.0 | 24.9 | 38.9 |
+| Pottuvil | 0.0 | 26.8 | 35.1 |
+| Puttalam | 0.0 | 26.4 | 33.4 |
+| Randenigala | 0.0 | — | — |
+| Rantambe | 0.0 | — | — |
+| Ratmalana | 0.3 | 26.2 | 33.1 |
+| Ratnapura | Trace | 24.4 | 34.5 |
+| Samanala Wawa | 0.0 | — | — |
+| Trincomalee | 2.4 | 25.5 | 38.4 |
+| Ukuwela | 0.0 | — | — |
+| Upper Kotmale | 0.0 | — | — |
+| Vavuniya | 0.0 | 26.2 | 38.3 |
+| Victoria | 0.0 | — | — |
+| Yattapatha (ARG) | 1.0 | — | — |
 
-The preview reports accepted, duplicate, conflicting, rejected, and missing-PDF
-counts without changing either archive. Against an existing database it reads a
-verified temporary snapshot, including committed WAL data, and retries or fails
-if the source changes during copying. The import preserves original JSON bytes,
-flags unverified legacy provenance and missing PDFs, and is repeatable. Unknown
-legacy placeholders become retryable attempts when their PDFs are available.
-Source archives are never deleted. A production archive has not been supplied,
-so production migration and multi-day comparison remain deployment tasks.
+</details>
 
-## Reports and interpretation
+## Pipeline status
 
-Readers should resolve `exports/current.json` once, then use its `export_dir` for
-all files. The manifest lists file sizes, SHA-256 hashes, record counts, freshness,
-and per-station filenames. A failed generation leaves the previous manifest
-intact; an unreferenced partial directory may remain for inspection.
-
-Legacy daily/flat JSON fields and `coverage.tsv` are retained. Additive fields
-include station IDs, source paths, document hashes, parser versions, trace rain,
-and quality flags. Generic `source_paths` can contain JSON; `pdf_paths` contains
-PDFs only. Source paths are relative to the data root. Per-station filenames use
-safe stable slugs listed in the manifest. New `summary.json`, `summary.md`, and
-`station_coverage.tsv` expose sample counts and calendar coverage.
-
-Intentional numeric corrections: each measure uses its own valid sample count;
-missing values remain null, zero is valid, trace rain is explicit, and paired
-temperatures require both minimum and maximum. Date windows use calendar days.
-Rain totals sum station measurements and are not regional rainfall totals.
-Coverage assumes the stations in the snapshot; station operating periods are
-unknown. Reports use the printed date for the period ending at 08:30 Sri Lanka
-time. Unverified historical station coordinates are flagged; ambiguous or missing
-coordinates remain null. Unsupported layouts fail visibly for review.
-
-To publish, copy a completed export plus its referenced raw files while preserving
-the data-root layout, then update the remote current manifest last. Set
-`WEATHER_PUBLIC_DATA_URL` to that data root's public URL before exporting.
-Publication credentials and upload transport belong to deployment configuration.
-The pipeline does not clone a data branch or push generated data.
-
-## Backup and operation
-
-```powershell
-python -m weather_lk backup --destination D:/weather-backups/snapshot-001
-python -m weather_lk restore --source D:/weather-backups/snapshot-001 --destination D:/weather-restored
-python -m weather_lk --data-dir D:/weather-restored export
-```
-
-Backup uses SQLite's consistent backup API and copies every referenced raw source.
-Restore verifies database integrity, foreign keys, and source checksums, and
-requires a new destination. Exports are regenerated after restoring. Keep an
-off-host backup copy and choose retention before enabling regular collection;
-there is no automatic pruning. Do not put an active WAL database on a shared
-network filesystem.
-
-No scheduler has been registered. To register a daily Windows task explicitly,
-after confirming report availability and backup arrangements:
-
-```powershell
-.\workflows\register_schedule.ps1 -DataDirectory D:/weather-data -At '10:00'
-```
-
-The time is an example, not a verified publication schedule. This registers for
-the current interactive account; unattended operation requires host-specific task
-credentials/configuration. The script does not overwrite an existing task.
-Configure a separate backup task and monitor nonzero exit codes and freshness.
-On Linux, use the same installed CLI with a systemd timer and absolute data path.
-
-The six independent CI schedules have been replaced by offline CI and one manual
-pipeline workflow. The latter requires a self-hosted runner labelled
-`weather-pipeline`, Firefox, and an absolute `WEATHER_DATA_DIR` repository variable
-outside its checkout. It makes a local backup after the run. No workflow has been
-run or deployed from this checkout. Select one production scheduler.
-
-| Setting | Default / purpose |
+| Area | Last verified result |
 | --- | --- |
-| `WEATHER_DATA_DIR` | Current-directory `var/weather_lk`; set an absolute durable path for jobs |
-| `WEATHER_SOURCE` | `meteo` |
-| `WEATHER_RUN_TIMEOUT_SECONDS` | `600`, ingestion deadline |
-| `WEATHER_MAX_REPORTS` | Unlimited, subject to deadline; optional processing limit |
-| `WEATHER_DOWNLOAD_TIMEOUT_SECONDS` | `60` per request |
-| `WEATHER_DOWNLOAD_RETRIES` | `3` total attempts with bounded backoff |
-| `WEATHER_STALE_HOURS` | `48` since the latest report period ending |
-| `WEATHER_LOG_LEVEL` | `INFO` |
-| `WEATHER_PUBLIC_DATA_URL` | Relative local links |
+| Official collection | Download, parse, and export completed for the report above |
+| Local validation | 95 offline tests passed on Windows, 13 Sep 2026 |
+| Recovery | Retry, duplicate handling, process cleanup, and backup restore verified |
+| Source integrity | Archived bytes checked against SHA-256 |
+| Automation | Collection is manual; production scheduling is not enabled |
 
-Verification: 95 offline tests pass on Windows, including both bundled PDFs,
-interrupted processing, descendant cleanup, migration previews, and backup restore.
-The fixture CLI run produced 120 observations and 149 verified export files.
-Wheel imports and packaged resources were checked outside the source directory.
-Normal tests are offline, including both bundled PDFs. Live discovery is opt-in:
-`python -m pytest -m live`. A bounded live run on 2026-09-13 successfully discovered, downloaded, parsed,
-and exported the 2026-09-12 official report: 60 observations, within the freshness
-threshold. Linux CI and sustained production freshness remain deployment checks. Older internal parser/summary classes
-remain for migration compatibility; supported workflow scripts delegate to the
-new CLI. Do not use the old internal classes for production processing.
+[CI workflow](.github/workflows/tests.yml) · [Collection workflow](.github/workflows/pipeline.yml) · [Architecture](docs/superpowers/plans/2026-09-12-weather-architecture.md)
 
-See the [architecture and migration plan](docs/superpowers/plans/2026-09-12-weather-architecture.md)
-and [LICENSE](LICENSE).
+## Run the pipeline
+
+```powershell
+python -m weather_lk run
+python -m weather_lk status
+```
+
+These commands refresh the configured local data store and versioned reports. This repository dashboard is a separately published snapshot and does not refresh when those commands run.
+
+**[Installation and configuration →](docs/OPERATIONS.md#install)**
+
+[Import an archive](docs/OPERATIONS.md#import-an-existing-archive) · [Backup and scheduling](docs/OPERATIONS.md#backup-and-operation) · [Report interpretation](docs/OPERATIONS.md#reports-and-interpretation)
+
+---
+
+ClimateLog LK preserves source reports, validates observations, and builds traceable weather summaries. Measurements use millimetres and degrees Celsius. [MIT license](LICENSE).
