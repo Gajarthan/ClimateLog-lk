@@ -14,7 +14,7 @@
 
 **Report: 2026-09-12 · Period ending 08:30 SLST**
 
-Captured 13 Sep 2026 · 01:13 SLST from the Department of Meteorology.
+Captured 13 Sep 2026 · 09:13 SLST from the Department of Meteorology.
 
 > This is a published snapshot, not a live feed. The date above identifies the data shown. Values are accurate to the report date shown.
 
