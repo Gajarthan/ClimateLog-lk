@@ -2,6 +2,8 @@
 
 **Status:** Application refactor implemented on 2026-09-13. Offline Windows verification is complete (95 tests); One live collection/export also passed (60 observations for 2026-09-12). Linux CI, sustained live monitoring, production archive reconciliation, and scheduling remain deployment gates. See README.md for the implemented commands and operating procedure.
 
+**Dashboard-only update:** The self-hosted collection workflow was subsequently removed at user request. The repository dashboard needs no collection runner; the design below records the earlier pipeline implementation.
+
 **Goal:** Build a reliable Sri Lankan weather collection and reporting pipeline with recoverable processing and accurate, traceable outputs.
 
 **Architecture:** One Python application with separate collection, parsing, persistence, analysis, and delivery modules. Keep original PDFs in durable local storage and use SQLite for observations, provenance, processing attempts, and run status. Run the complete pipeline as one scheduled CLI job, with explicit status, backups, and optional export publication.

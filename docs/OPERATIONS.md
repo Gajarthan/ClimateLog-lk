@@ -172,10 +172,10 @@ credentials/configuration. The script does not overwrite an existing task.
 Configure a separate backup task and monitor nonzero exit codes and freshness.
 On Linux, use the same installed CLI with a systemd timer and absolute data path.
 
-The six independent CI schedules have been replaced by offline CI and one manual
-pipeline workflow. The latter requires a self-hosted runner labelled
-`weather-pipeline`, Firefox, and an absolute `WEATHER_DATA_DIR` repository variable
-outside its checkout. It makes a local backup after the run. Offline CI runs on GitHub; the collection workflow remains manually triggered. Select one production scheduler.
+The repository retains offline test CI. The self-hosted collection workflow was
+removed because the published project is a README dashboard. No collection runner
+is required to view the dashboard. Local CLI commands remain available for
+manual data preparation.
 
 | Setting | Default / purpose |
 | --- | --- |
