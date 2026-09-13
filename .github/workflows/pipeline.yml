@@ -1,6 +1,9 @@
 name: Refresh weather dashboard
 on:
   workflow_dispatch:
+  schedule:
+    # Daily at 10:00 AM Sri Lanka time (UTC+05:30).
+    - cron: '30 4 * * *'
 permissions:
   contents: write
   actions: read
@@ -38,7 +41,7 @@ jobs:
           def api(path):
               return json.loads(subprocess.check_output(['gh','api',path], text=True))
           repo = os.environ['GH_REPO']
-          runs = api(f'repos/{repo}/actions/workflows/pipeline.yml/runs?branch=main&event=workflow_dispatch&status=completed&per_page=100')['workflow_runs']
+          runs = api(f'repos/{repo}/actions/workflows/pipeline.yml/runs?branch=main&status=completed&per_page=100')['workflow_runs']
           restored = False
           for run in runs:
               artifacts = api(f'repos/{repo}/actions/runs/{run["id"]}/artifacts')['artifacts']

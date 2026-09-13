@@ -159,7 +159,7 @@ off-host backup copy and choose retention before enabling regular collection;
 there is no automatic pruning. Do not put an active WAL database on a shared
 network filesystem.
 
-No scheduler has been registered. To register a daily Windows task explicitly,
+No local Windows task has been registered. To register a daily Windows task explicitly,
 after confirming report availability and backup arrangements:
 
 ```powershell
@@ -174,13 +174,16 @@ On Linux, use the same installed CLI with a systemd timer and absolute data path
 
 ## GitHub-hosted dashboard refresh
 
-Open **Actions > Refresh weather dashboard > Run workflow** on the main branch.
+The dashboard refresh runs daily at **10:00 AM Sri Lanka time (04:30 UTC)**
+on the main branch. To refresh manually, open
+**Actions > Refresh weather dashboard > Run workflow** on the main branch.
 The job runs on `ubuntu-latest`; no self-hosted runner or data-directory variable
 is needed. It installs Firefox, restores the latest backup artifact, collects the
 current report, and commits the README and its visuals together using the built-in
-repository token. The README remains weather-only. No recurring schedule is set.
+repository token. The README remains weather-only.
 
-Every initialized run saves a `weather-state` artifact containing the database,
+Both scheduled and manual runs restore the latest available state from completed
+runs. Every initialized run saves a `weather-state` artifact containing the database,
 original sources, and backup manifest, including after a collection failure.
 Artifacts are retained for 90 days (subject to repository retention limits).
 Download an off-host copy for long-term retention. If an available previous backup
