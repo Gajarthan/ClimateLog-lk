@@ -1,4 +1,4 @@
-# Sri Lanka Weather
+# ClimateLog LK
 
 A local data collection and reporting pipeline. Original reports are archived by
 SHA-256; SQLite records processing attempts, observation versions, and explicitly
