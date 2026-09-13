@@ -4,7 +4,7 @@
 
 ### Sri Lanka · Weather observation dashboard
 
-**[Weather snapshot](#weather-snapshot) · [Data quality](#data-quality) · [Station readings](#station-readings) · [Operating guide](docs/OPERATIONS.md)**
+**[Weather snapshot](#weather-snapshot) · [Data quality](#data-quality) · [Station readings](#station-readings) · [Source data](#source-data)**
 
 </div>
 
@@ -16,9 +16,9 @@
 
 Captured 13 Sep 2026 · 01:13 SLST from the Department of Meteorology.
 
-> This is a published snapshot, not a live feed. The date above identifies the data shown. Collection and README refresh are not scheduled.
+> This is a published snapshot, not a live feed. The date above identifies the data shown. Values are accurate to the report date shown.
 
-![Report overview: 60 stations; highest rain 24.1 mm at Bandarawela; highest maximum 38.9 ?C at Polonnaruwa; lowest minimum 12.6 ?C at Nuwara Eliya](docs/dashboard/overview.svg)
+![Report overview: 60 stations; highest rain 24.1 mm at Bandarawela; highest maximum 38.9 °C at Polonnaruwa; lowest minimum 12.6 °C at Nuwara Eliya](docs/dashboard/overview.svg)
 
 [Download observations](docs/dashboard/snapshot.json) · [View archived source PDF](docs/dashboard/report.pdf) · [Official source](https://meteo.gov.lk/)
 
@@ -29,7 +29,7 @@ Captured 13 Sep 2026 · 01:13 SLST from the Department of Meteorology.
 Station measurements in millimetres. These values are not a regional rainfall total.
 
 <details>
-<summary><strong>Explore the rainfall heatmap ? all 60 stations</strong></summary>
+<summary><strong>Explore the rainfall heatmap / all 60 stations</strong></summary>
 
 ![Rainfall heatmap showing all 60 stations in alphabetical order](docs/dashboard/station-rainfall.png)
 
@@ -128,39 +128,10 @@ Missing readings are shown as **—**. Zero is a measured value; **Trace** is re
 
 </details>
 
-## Pipeline status
+## Source data
 
-| Area | Last verified result |
-| --- | --- |
-| Official collection | Download, parse, and export completed for the report above |
-| Local validation | 95 offline tests passed on Windows, 13 Sep 2026 |
-| Recovery | Retry, duplicate handling, process cleanup, and backup restore verified |
-| Source integrity | Archived bytes checked against SHA-256 |
-| Automation | Collection is manual; production scheduling is not enabled |
-
-[CI workflow](.github/workflows/tests.yml) · [Collection workflow](.github/workflows/pipeline.yml) · [Architecture](docs/superpowers/plans/2026-09-12-weather-architecture.md)
-
-## Run the pipeline
-
-```powershell
-python -m weather_lk run
-python -m weather_lk status
-```
-
-These commands refresh the configured local data store and versioned reports. This repository dashboard is a separately published snapshot and does not refresh when those commands run.
-
-To redraw the summary cards, rainfall heatmap, and coverage chart from the committed snapshot:
-
-```powershell
-python workflows/render_dashboard_visuals.py
-```
-
-The renderer uses `docs/dashboard/snapshot.json`; it does not fetch new observations or change the dashboard date.
-
-**[Installation and configuration →](docs/OPERATIONS.md#install)**
-
-[Import an archive](docs/OPERATIONS.md#import-an-existing-archive) · [Backup and scheduling](docs/OPERATIONS.md#backup-and-operation) · [Report interpretation](docs/OPERATIONS.md#reports-and-interpretation)
+[Download station observations](docs/dashboard/snapshot.json) · [Read the original weather report](docs/dashboard/report.pdf) · [Department of Meteorology](https://meteo.gov.lk/)
 
 ---
 
-ClimateLog LK preserves source reports, validates observations, and builds traceable weather summaries. Measurements use millimetres and degrees Celsius. [MIT license](LICENSE).
+ClimateLog LK · Sri Lankan rainfall and temperature observations. Measurements use millimetres and degrees Celsius. [MIT license](LICENSE).
