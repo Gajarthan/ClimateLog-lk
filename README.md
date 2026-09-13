@@ -18,7 +18,7 @@ Captured 13 Sep 2026 · 01:13 SLST from the Department of Meteorology.
 
 > This is a published snapshot, not a live feed. The date above identifies the data shown. Values are accurate to the report date shown.
 
-![Report overview: 60 stations; highest rain 24.1 mm at Bandarawela; highest maximum 38.9 °C at Polonnaruwa; lowest minimum 12.6 °C at Nuwara Eliya](docs/dashboard/overview.svg)
+![Weather overview for 2026-09-12: 60 station readings](docs/dashboard/overview.svg)
 
 [Download observations](docs/dashboard/snapshot.json) · [View archived source PDF](docs/dashboard/report.pdf) · [Official source](https://meteo.gov.lk/)
 
@@ -54,7 +54,7 @@ Each line connects one station's daily minimum and maximum. Only stations with b
 | Maximum temperature | 24 / 60 | 36 |
 | Paired temperatures | 24 / 60 | 36 |
 
-**1 trace-rain reading** · **14 unresolved station identities** · **44 rows with unverified historical coordinates**
+**1 trace-rain readings** · **14 unresolved station identities** · **44 rows with unverified historical coordinates**
 
 Missing readings are shown as **—**. Zero is a measured value; **Trace** is retained separately. Coverage describes this report, not the entire national station network. Station and coordinate flags remain available in the observation download. No location map is shown because coordinate verification is incomplete.
 

@@ -2,6 +2,8 @@
 
 
 def discover_meteo():
+    import os
+
     from selenium import webdriver
     from selenium.webdriver.common.by import By
     from selenium.webdriver.firefox.options import Options
@@ -10,6 +12,8 @@ def discover_meteo():
 
     options = Options()
     options.add_argument("--headless")
+    if os.environ.get("WEATHER_FIREFOX_BINARY"):
+        options.binary_location = os.environ["WEATHER_FIREFOX_BINARY"]
     browser = webdriver.Firefox(options=options)
     try:
         browser.set_page_load_timeout(120)

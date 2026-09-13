@@ -2,7 +2,7 @@
 
 **Status:** Application refactor implemented on 2026-09-13. Offline Windows verification is complete (95 tests); One live collection/export also passed (60 observations for 2026-09-12). Linux CI, sustained live monitoring, production archive reconciliation, and scheduling remain deployment gates. See README.md for the implemented commands and operating procedure.
 
-**Dashboard-only update:** The self-hosted collection workflow was subsequently removed at user request. The repository dashboard needs no collection runner; the design below records the earlier pipeline implementation.
+**Hosting update:** Collection now runs manually on GitHub-hosted Ubuntu runners with backup artifacts and weather-only README publication. No self-hosted runner is required. See the operating guide for retention and recovery.
 
 **Goal:** Build a reliable Sri Lankan weather collection and reporting pipeline with recoverable processing and accurate, traceable outputs.
 

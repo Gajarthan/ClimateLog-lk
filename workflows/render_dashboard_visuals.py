@@ -16,8 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "docs" / "dashboard"
 
 
-def render():
-    snapshot = json.loads((ASSETS / "snapshot.json").read_text(encoding="utf-8"))
+def render(assets=ASSETS):
+    snapshot = json.loads((assets / "snapshot.json").read_text(encoding="utf-8"))
     rows = snapshot["observations"]
     day = snapshot["report_date"]
     high_rain = max((r for r in rows if r["rain"] is not None), key=lambda r: r["rain"])
@@ -81,7 +81,7 @@ def render():
                 f'<line x1="{x + 410}" x2="{x + 430}" y1="{y + 57 + j * 14}" y2="{y + 57 + j * 14}" stroke="#33516c" stroke-width="2"/>'
             )
     svg += ["</g></svg>"]
-    (ASSETS / "overview.svg").write_text("\n".join(svg) + "\n", encoding="utf-8")
+    (assets / "overview.svg").write_text("\n".join(svg) + "\n", encoding="utf-8")
 
     colors = ["#e4edf5", "#a9c4ee", "#9be3d3", "#43b6a0", "#157d74", "#405164"]
 
@@ -160,7 +160,7 @@ def render():
         labelcolor="#cbd9e6",
         fontsize=11,
     )
-    fig.savefig(ASSETS / "station-rainfall.png", dpi=140, facecolor=fig.get_facecolor())
+    fig.savefig(assets / "station-rainfall.png", dpi=140, facecolor=fig.get_facecolor())
     plt.close(fig)
 
     available = [
@@ -191,7 +191,7 @@ def render():
     ax.set_title(
         "Measurement availability", loc="left", color="#f4f8fc", fontsize=17, pad=12
     )
-    fig.savefig(ASSETS / "coverage.png", dpi=150, facecolor=fig.get_facecolor())
+    fig.savefig(assets / "coverage.png", dpi=150, facecolor=fig.get_facecolor())
     plt.close(fig)
 
 

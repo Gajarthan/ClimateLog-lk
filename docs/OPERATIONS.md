@@ -172,10 +172,33 @@ credentials/configuration. The script does not overwrite an existing task.
 Configure a separate backup task and monitor nonzero exit codes and freshness.
 On Linux, use the same installed CLI with a systemd timer and absolute data path.
 
-The repository retains offline test CI. The self-hosted collection workflow was
-removed because the published project is a README dashboard. No collection runner
-is required to view the dashboard. Local CLI commands remain available for
-manual data preparation.
+## GitHub-hosted dashboard refresh
+
+Open **Actions > Refresh weather dashboard > Run workflow** on the main branch.
+The job runs on `ubuntu-latest`; no self-hosted runner or data-directory variable
+is needed. It installs Firefox, restores the latest backup artifact, collects the
+current report, and commits the README and its visuals together using the built-in
+repository token. The README remains weather-only. No recurring schedule is set.
+
+Every initialized run saves a `weather-state` artifact containing the database,
+original sources, and backup manifest, including after a collection failure.
+Artifacts are retained for 90 days (subject to repository retention limits).
+Download an off-host copy for long-term retention. If an available previous backup
+is expired, the workflow stops instead of silently resetting the archive. The
+first run without a prior artifact starts from the committed source PDF. Deleted
+artifacts cannot be discovered, so avoid deleting the latest state artifact.
+
+A failed download, stale report, conflicting revision, invalid source checksum,
+rendering error, or rejected push leaves the published README unchanged. Inspect
+the failed run before retrying. Backup restoration and report date checks protect
+against replacing the dashboard with an older report.
+
+To prepare the same dashboard locally after exporting:
+
+```powershell
+python workflows/update_dashboard.py --data-dir D:/weather-data
+```
+
 
 | Setting | Default / purpose |
 | --- | --- |

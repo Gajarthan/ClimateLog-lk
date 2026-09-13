@@ -1,0 +1,89 @@
+name: Refresh weather dashboard
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: weather-dashboard
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      WEATHER_DATA_DIR: var/weather-actions
+      WEATHER_RUN_TIMEOUT_SECONDS: '600'
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - uses: browser-actions/setup-firefox@v1
+        id: firefox
+      - run: python -m pip install -r requirements.txt
+      - name: Restore previous state or initialize from published report
+        id: restore
+        shell: python
+        run: |
+          import json, os, pathlib, subprocess
+          from weather_lk.services.backup import restore_backup
+          def api(path):
+              return json.loads(subprocess.check_output(['gh','api',path], text=True))
+          repo = os.environ['GH_REPO']
+          runs = api(f'repos/{repo}/actions/workflows/pipeline.yml/runs?branch=main&event=workflow_dispatch&status=completed&per_page=100')['workflow_runs']
+          restored = False
+          for run in runs:
+              artifacts = api(f'repos/{repo}/actions/runs/{run["id"]}/artifacts')['artifacts']
+              states = [item for item in artifacts if item['name'] == 'weather-state']
+              if not states:
+                  continue
+              if states[0]['expired']:
+                  raise SystemExit('Previous backup expired. Restore an external backup before restarting collection.')
+              directory = pathlib.Path(os.environ['RUNNER_TEMP']) / 'previous-backup'
+              subprocess.run(['gh','run','download',str(run['id']),'-n','weather-state','-D',str(directory)],check=True)
+              restore_backup(directory, os.environ['WEATHER_DATA_DIR'])
+              restored = True
+              break
+          if not restored:
+              subprocess.run(['python','-m','weather_lk','ingest','--file','docs/dashboard/report.pdf'],check=True)
+      - name: Collect and export current observations
+        id: collect
+        env:
+          WEATHER_FIREFOX_BINARY: ${{ steps.firefox.outputs.firefox-path }}
+        run: python -m weather_lk run --no-charts
+      - name: Prepare verified backup
+        id: backup
+        if: always() && steps.restore.outcome == 'success'
+        run: python -m weather_lk backup --destination "$RUNNER_TEMP/weather-backup"
+      - name: Preserve database and original reports
+        if: always() && steps.backup.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: weather-state
+          path: ${{ runner.temp }}/weather-backup/
+          retention-days: 90
+          if-no-files-found: error
+      - name: Render complete dashboard
+        if: success() && steps.collect.outcome == 'success'
+        run: python workflows/update_dashboard.py --data-dir "$WEATHER_DATA_DIR"
+      - name: Publish dashboard
+        if: success() && steps.collect.outcome == 'success'
+        run: |
+          git config user.name 'ClimateLog LK'
+          git config user.email 'project@localhost'
+          git add README.md docs/dashboard/
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'Dashboard is already current.'
+          else
+            git commit -m 'Refresh weather dashboard'
+            git push origin HEAD:main
+          fi
