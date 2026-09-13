@@ -1,0 +1,15 @@
+{
+  "report_date": "2024-02-22",
+  "observation_count": 60,
+  "date_basis": "24-hour period ending at 0830SLTS on the printed date",
+  "observations": [
+    {"station_id": "anuradhapura", "place": "Anuradhapura", "min_temp": 24.7, "max_temp": 34.4, "rain": 0.0, "trace_rain": false},
+    {"station_id": "ratnapura", "place": "Ratnapura", "min_temp": 23.4, "max_temp": 37.4, "rain": 0.0, "trace_rain": true},
+    {"station_id": "nuwara-eliya", "place": "Nuwara Eliya", "min_temp": 11.4, "max_temp": 22.0, "rain": 0.0, "trace_rain": false},
+    {"station_id": "norton", "place": "Norton", "min_temp": null, "max_temp": null, "rain": 2.0, "trace_rain": false},
+    {"station_id": "lakshapana", "place": "Lakshapana", "min_temp": null, "max_temp": null, "rain": 8.4, "trace_rain": false},
+    {"station_id": "maskeliya", "place": "Maskeliya", "min_temp": null, "max_temp": null, "rain": null, "trace_rain": false},
+    {"station_id": "wevalthalawa", "place": "Wevalthalawa", "min_temp": null, "max_temp": null, "rain": 4.5, "trace_rain": false},
+    {"station_id": "kalmunai", "place": "Kalmunai", "min_temp": null, "max_temp": null, "rain": 0.0, "trace_rain": false}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "report_date": "2024-02-23",
+  "observation_count": 60,
+  "date_basis": "24-hour period ending at 0830SLTS on the printed date",
+  "observations": [
+    {"station_id": "colombo", "place": "Colombo", "min_temp": 25.8, "max_temp": 33.0, "rain": 0.0, "trace_rain": true},
+    {"station_id": "galle", "place": "Galle", "min_temp": 25.6, "max_temp": 31.7, "rain": 0.9, "trace_rain": false},
+    {"station_id": "hambantota", "place": "Hambantota", "min_temp": 25.2, "max_temp": 32.0, "rain": 0.1, "trace_rain": false},
+    {"station_id": "moneragala", "place": "Moneragala", "min_temp": 23.5, "max_temp": 34.6, "rain": 0.0, "trace_rain": true},
+    {"station_id": "nuwara-eliya", "place": "Nuwara Eliya", "min_temp": 10.5, "max_temp": 21.6, "rain": 0.0, "trace_rain": false},
+    {"station_id": "mattala", "place": "Mattala", "min_temp": 23.7, "max_temp": 34.1, "rain": 0.2, "trace_rain": false},
+    {"station_id": "norton", "place": "Norton", "min_temp": null, "max_temp": null, "rain": 57.0, "trace_rain": false},
+    {"station_id": "samanala-wawa", "place": "Samanala Wawa", "min_temp": null, "max_temp": null, "rain": 35.0, "trace_rain": false},
+    {"station_id": "maskeliya", "place": "Maskeliya", "min_temp": null, "max_temp": null, "rain": null, "trace_rain": false},
+    {"station_id": "guruluwana", "place": "Guruluwana", "min_temp": null, "max_temp": null, "rain": 33.2, "trace_rain": false},
+    {"station_id": "port-authority", "place": "Port Authority", "min_temp": null, "max_temp": null, "rain": 0.0, "trace_rain": false}
+  ]
+}
