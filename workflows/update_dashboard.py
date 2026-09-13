@@ -85,6 +85,9 @@ def render_assets(assets):
 
     snapshot = json.loads((assets / "snapshot.json").read_text(encoding="utf-8"))
     render_station_charts(snapshot, assets)
+    from weather_lk.exports.station_map import render_map
+
+    render_map(snapshot, assets)
 
 
 def confined(root, relative):

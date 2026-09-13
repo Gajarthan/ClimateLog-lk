@@ -4,7 +4,7 @@
 
 ### Sri Lanka · Weather observation dashboard
 
-**[Weather snapshot](#weather-snapshot) · [Data quality](#data-quality) · [Station readings](#station-readings) · [Source data](#source-data)**
+**[Weather snapshot](#weather-snapshot) · [Sri Lanka map](#sri-lanka-map) · [Data quality](#data-quality) · [Station readings](#station-readings) · [Source data](#source-data)**
 
 </div>
 
@@ -21,6 +21,12 @@ Captured $captured from the Department of Meteorology.
 ![Weather overview for $report_date: $count station readings](docs/dashboard/overview.svg)
 
 [Download observations](docs/dashboard/snapshot.json) · [View archived source PDF](docs/dashboard/report.pdf) · [Official source](https://meteo.gov.lk/)
+
+## Sri Lanka map
+
+![Sri Lanka station map with rainfall and daily maximum temperatures for $report_date](docs/dashboard/sri-lanka-map.png)
+
+Markers show stations matched to published historical coordinates. Unmatched locations are omitted, not estimated. The map labels rainfall and maximum temperature; all $count readings remain available below. [Map sources and location notes](docs/dashboard/MAP_SOURCES.md).
 
 ### Rainfall
 
@@ -51,7 +57,7 @@ $quality_table
 
 **$trace_count trace-rain readings** · **$unknown_count unresolved station identities** · **$coordinate_count rows with unverified historical coordinates**
 
-Missing readings are shown as **—**. Zero is a measured value; **Trace** is retained separately. Coverage describes this report, not the entire national station network. Station and coordinate flags remain available in the observation download. No location map is shown because coordinate verification is incomplete.
+Missing readings are shown as **—**. Zero is a measured value; **Trace** is retained separately. Coverage describes this report, not the entire national station network. Station and coordinate flags remain available in the observation download. The map uses a separate published reference catalog; its historical positions do not verify current instrument locations.
 
 ## Station readings
 

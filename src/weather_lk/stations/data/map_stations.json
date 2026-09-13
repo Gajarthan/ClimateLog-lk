@@ -1,0 +1,137 @@
+{
+  "source": "NOAA NCEI Integrated Surface Database station history",
+  "source_url": "https://www.ncei.noaa.gov/pub/data/noaa/isd-history.csv",
+  "retrieved": "2026-09-13",
+  "source_sha256": "1994747ab4af1b97e63adb434b4d0d022f2daee76f0c144ea9ab46be2d906604",
+  "note": "Locations are historical catalog references, not verified current instrument positions. Whitespace ignored; Mullaittivu is matched to Mullaitivu as a spelling variant. No geographic interpolation.",
+  "stations": {
+    "jaffna": {
+      "latitude": 9.65,
+      "longitude": 80.017,
+      "reference_name": "JAFFNA",
+      "usaf": "434040",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "mullaitivu": {
+      "latitude": 9.267,
+      "longitude": 80.817,
+      "reference_name": "MULLAITTIVU",
+      "usaf": "434100",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "mannar": {
+      "latitude": 8.983,
+      "longitude": 79.917,
+      "reference_name": "MANNAR",
+      "usaf": "434130",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "vavuniya": {
+      "latitude": 8.75,
+      "longitude": 80.5,
+      "reference_name": "VAVUNIYA",
+      "usaf": "434150",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "anuradhapura": {
+      "latitude": 8.301,
+      "longitude": 80.428,
+      "reference_name": "ANURADHAPURA",
+      "usaf": "434210",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "mahailluppallama": {
+      "latitude": 8.117,
+      "longitude": 80.467,
+      "reference_name": "MAHA ILLUPPALLAMA",
+      "usaf": "434220",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "puttalam": {
+      "latitude": 8.033,
+      "longitude": 79.833,
+      "reference_name": "PUTTALAM",
+      "usaf": "434240",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "batticaloa": {
+      "latitude": 7.706,
+      "longitude": 81.679,
+      "reference_name": "BATTICALOA",
+      "usaf": "434360",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "kurunegala": {
+      "latitude": 7.467,
+      "longitude": 80.367,
+      "reference_name": "KURUNEGALA",
+      "usaf": "434410",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "colombo": {
+      "latitude": 6.9,
+      "longitude": 79.867,
+      "reference_name": "COLOMBO",
+      "usaf": "434660",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "nuwara-eliya": {
+      "latitude": 6.967,
+      "longitude": 80.767,
+      "reference_name": "NUWARA ELIYA",
+      "usaf": "434730",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "pottuvil": {
+      "latitude": 6.883,
+      "longitude": 81.833,
+      "reference_name": "POTTUVIL",
+      "usaf": "434750",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "badulla": {
+      "latitude": 6.983,
+      "longitude": 81.05,
+      "reference_name": "BADULLA",
+      "usaf": "434790",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "ratnapura": {
+      "latitude": 6.683,
+      "longitude": 80.4,
+      "reference_name": "RATNAPURA",
+      "usaf": "434860",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "galle": {
+      "latitude": 6.033,
+      "longitude": 80.217,
+      "reference_name": "GALLE",
+      "usaf": "434950",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    },
+    "hambantota": {
+      "latitude": 6.117,
+      "longitude": 81.133,
+      "reference_name": "HAMBANTOTA",
+      "usaf": "434970",
+      "record_end": "20250824",
+      "match": "name; historical reference position"
+    }
+  }
+}
