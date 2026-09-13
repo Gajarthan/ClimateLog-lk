@@ -18,10 +18,7 @@ Captured 13 Sep 2026 · 01:13 SLST from the Department of Meteorology.
 
 > This is a published snapshot, not a live feed. The date above identifies the data shown. Collection and README refresh are not scheduled.
 
-| Reporting stations | Highest rainfall | Highest maximum | Lowest minimum |
-| :---: | :---: | :---: | :---: |
-| **60** | **24.1 mm** | **38.9 °C** | **12.6 °C** |
-| In this report | Bandarawela | Polonnaruwa | Nuwara Eliya |
+![Report overview: 60 stations; highest rain 24.1 mm at Bandarawela; highest maximum 38.9 ?C at Polonnaruwa; lowest minimum 12.6 ?C at Nuwara Eliya](docs/dashboard/overview.svg)
 
 [Download observations](docs/dashboard/snapshot.json) · [View archived source PDF](docs/dashboard/report.pdf) · [Official source](https://meteo.gov.lk/)
 
@@ -31,6 +28,15 @@ Captured 13 Sep 2026 · 01:13 SLST from the Department of Meteorology.
 
 Station measurements in millimetres. These values are not a regional rainfall total.
 
+<details>
+<summary><strong>Explore the rainfall heatmap ? all 60 stations</strong></summary>
+
+![Rainfall heatmap showing all 60 stations in alphabetical order](docs/dashboard/station-rainfall.png)
+
+Each tile is a station, arranged alphabetically. This is not a geographic map. Color bands distinguish zero, trace, and measured rainfall; exact millimetres are printed on every tile.
+
+</details>
+
 ### Temperature
 
 ![Daily minimum and maximum temperatures by station](docs/dashboard/temperature.png)
@@ -39,6 +45,8 @@ Each line connects one station's daily minimum and maximum. Only stations with b
 
 ## Data quality
 
+![Measurement availability: rainfall 60 of 60, paired temperatures 24 of 60](docs/dashboard/coverage.png)
+
 | Measure | Available | Missing |
 | --- | ---: | ---: |
 | Rainfall | 60 / 60 | 0 |
@@ -46,7 +54,7 @@ Each line connects one station's daily minimum and maximum. Only stations with b
 | Maximum temperature | 24 / 60 | 36 |
 | Paired temperatures | 24 / 60 | 36 |
 
-**1 trace-rain readings** · **14 unresolved station identities** · **44 rows with unverified historical coordinates**
+**1 trace-rain reading** · **14 unresolved station identities** · **44 rows with unverified historical coordinates**
 
 Missing readings are shown as **—**. Zero is a measured value; **Trace** is retained separately. Coverage describes this report, not the entire national station network. Station and coordinate flags remain available in the observation download. No location map is shown because coordinate verification is incomplete.
 
@@ -140,6 +148,14 @@ python -m weather_lk status
 ```
 
 These commands refresh the configured local data store and versioned reports. This repository dashboard is a separately published snapshot and does not refresh when those commands run.
+
+To redraw the summary cards, rainfall heatmap, and coverage chart from the committed snapshot:
+
+```powershell
+python workflows/render_dashboard_visuals.py
+```
+
+The renderer uses `docs/dashboard/snapshot.json`; it does not fetch new observations or change the dashboard date.
 
 **[Installation and configuration →](docs/OPERATIONS.md#install)**
 
