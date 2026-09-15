@@ -1,14 +1,28 @@
 {
-  "report_date": "2026-09-14",
-  "captured_at": "2026-09-14T10:02:37.662297+00:00",
-  "source_url": "https://meteo.gov.lk/pdfs/twentyfour_pdf.pdf?t=1789380151685",
+  "report_date": "2026-09-15",
+  "captured_at": "2026-09-15T09:31:14.021365+00:00",
+  "source_url": "https://meteo.gov.lk/pdfs/twentyfour_pdf.pdf?t=1789464668852",
   "archived_pdf": "report.pdf",
   "observations": [
     {
-      "station_id": "ambewela",
-      "place": "Ambewela",
-      "date": "2026-09-14",
-      "rain": 41.0,
+      "station_id": "anuradhapura",
+      "place": "Anuradhapura",
+      "date": "2026-09-15",
+      "rain": 0.0,
+      "min_temp": 24.7,
+      "max_temp": 35.1,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "awissawella",
+      "place": "Awissawella",
+      "date": "2026-09-15",
+      "rain": 114.2,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -16,41 +30,55 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "anuradhapura",
-      "place": "Anuradhapura",
-      "date": "2026-09-14",
-      "rain": 12.4,
-      "min_temp": 25.1,
-      "max_temp": 36.3,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "badulla",
       "place": "Badulla",
-      "date": "2026-09-14",
-      "rain": 5.9,
-      "min_temp": 20.7,
-      "max_temp": 30.5,
+      "date": "2026-09-15",
+      "rain": 0.0,
+      "min_temp": 20.8,
+      "max_temp": 30.2,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "balapitiya",
-      "place": "Balapitiya",
-      "date": "2026-09-14",
-      "rain": 117.4,
+      "station_id": "bandarawela",
+      "place": "Bandarawela",
+      "date": "2026-09-15",
+      "rain": 39.8,
+      "min_temp": 18.1,
+      "max_temp": 25.4,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "batticaloa",
+      "place": "Batticaloa",
+      "date": "2026-09-15",
+      "rain": 0.8,
+      "min_temp": 26.4,
+      "max_temp": 32.6,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "batuwangala",
+      "place": "Batuwangala",
+      "date": "2026-09-15",
+      "rain": 111.5,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -58,13 +86,27 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "bandaragama",
-      "place": "Bandaragama",
-      "date": "2026-09-14",
-      "rain": 147.3,
+      "station_id": "benthotawatta",
+      "place": "Benthotawatta",
+      "date": "2026-09-15",
+      "rain": 134.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "coordinates_missing"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "bowatenna",
+      "place": "Bowatenna",
+      "date": "2026-09-15",
+      "rain": 5.4,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -72,12 +114,236 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "bandaragama-arg-0a057e8923352f62",
-      "place": "Bandaragama (ARG)",
-      "date": "2026-09-14",
+      "station_id": "canyon",
+      "place": "Canyon",
+      "date": "2026-09-15",
+      "rain": 15.8,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "castlereigh",
+      "place": "Castlereigh",
+      "date": "2026-09-15",
+      "rain": 9.0,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "colombo",
+      "place": "Colombo",
+      "date": "2026-09-15",
+      "rain": 25.2,
+      "min_temp": 24.4,
+      "max_temp": 31.6,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "dunumale-estate-arg-f5d3f687d0291b78",
+      "place": "Dunumale Estate (ARG)",
+      "date": "2026-09-15",
+      "rain": 91.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "eladuwa-estate-arg-d5c7372149bd2df7",
+      "place": "Eladuwa Estate (ARG)",
+      "date": "2026-09-15",
+      "rain": 118.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "ellakanda-watta-arg-bace822941eabb12",
+      "place": "Ellakanda Watta (ARG)",
+      "date": "2026-09-15",
+      "rain": 96.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "galle",
+      "place": "Galle",
+      "date": "2026-09-15",
+      "rain": 25.2,
+      "min_temp": 25.4,
+      "max_temp": 28.8,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "halwathura-estate-arg-b4c092b0b69eecad",
+      "place": "Halwathura Estate (ARG)",
+      "date": "2026-09-15",
+      "rain": 123.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "hambantota",
+      "place": "Hambantota",
+      "date": "2026-09-15",
+      "rain": 4.1,
+      "min_temp": 25.6,
+      "max_temp": 31.7,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "inginiyagala",
+      "place": "Inginiyagala",
+      "date": "2026-09-15",
+      "rain": 12.0,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "jaffna",
+      "place": "Jaffna",
+      "date": "2026-09-15",
+      "rain": 3.4,
+      "min_temp": 25.3,
+      "max_temp": 33.5,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "katugastota",
+      "place": "Katugastota",
+      "date": "2026-09-15",
+      "rain": 16.0,
+      "min_temp": 22.7,
+      "max_temp": 32.2,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "katunayake",
+      "place": "Katunayake",
+      "date": "2026-09-15",
+      "rain": 33.9,
+      "min_temp": 24.6,
+      "max_temp": 31.1,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "keenagahawila-arg-5db2ffdbd6563f69",
+      "place": "Keenagahawila (ARG)",
+      "date": "2026-09-15",
+      "rain": 114.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "keselhenawa-arg-c6175a0d7cf18ea9",
+      "place": "Keselhenawa (ARG)",
+      "date": "2026-09-15",
+      "rain": 80.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "kethendola",
+      "place": "Kethendola",
+      "date": "2026-09-15",
+      "rain": 88.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "coordinates_missing"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "kirindiwela-arg-8c19dfc38644f7f9",
+      "place": "Kirindiwela (ARG)",
+      "date": "2026-09-15",
       "rain": 147.0,
       "min_temp": null,
       "max_temp": null,
@@ -86,391 +352,125 @@
         "unknown_station"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "bandarawela",
-      "place": "Bandarawela",
-      "date": "2026-09-14",
-      "rain": 40.3,
-      "min_temp": 17.7,
-      "max_temp": 24.8,
+      "station_id": "kotmale",
+      "place": "Kotmale",
+      "date": "2026-09-15",
+      "rain": 0.0,
+      "min_temp": null,
+      "max_temp": null,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "batticaloa",
-      "place": "Batticaloa",
-      "date": "2026-09-14",
+      "station_id": "kukuleganaga",
+      "place": "Kukuleganaga",
+      "date": "2026-09-15",
+      "rain": 36.0,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "kuliyapitiya",
+      "place": "Kuliyapitiya",
+      "date": "2026-09-15",
+      "rain": 79.0,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "kurunegala",
+      "place": "Kurunegala",
+      "date": "2026-09-15",
+      "rain": 0.4,
+      "min_temp": 24.3,
+      "max_temp": 35.2,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "laxapana",
+      "place": "Laxapana",
+      "date": "2026-09-15",
+      "rain": 6.4,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "madolthenna-estate-arg-7b661f3fdb43c8ab",
+      "place": "Madolthenna Estate (ARG)",
+      "date": "2026-09-15",
+      "rain": 109.5,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "maha-illuppallama",
+      "place": "Maha Illuppallama",
+      "date": "2026-09-15",
+      "rain": 6.9,
+      "min_temp": 23.7,
+      "max_temp": 35.6,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "mannar",
+      "place": "Mannar",
+      "date": "2026-09-15",
       "rain": 0.0,
-      "min_temp": 26.0,
+      "min_temp": 25.3,
       "max_temp": 34.1,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "benthotawatta",
-      "place": "Benthotawatta",
-      "date": "2026-09-14",
-      "rain": 114.6,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "coordinates_missing"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "bowatenna",
-      "place": "Bowatenna",
-      "date": "2026-09-14",
-      "rain": 69.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "canyon",
-      "place": "Canyon",
-      "date": "2026-09-14",
-      "rain": 11.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "castlereigh",
-      "place": "Castlereigh",
-      "date": "2026-09-14",
-      "rain": 2.5,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "colombo",
-      "place": "Colombo",
-      "date": "2026-09-14",
-      "rain": 0.7,
-      "min_temp": 27.3,
-      "max_temp": 31.2,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "devidson-tf-arg-c9e96718af94d989",
-      "place": ". Devidson TF (ARG)",
-      "date": "2026-09-14",
-      "rain": 45.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "unknown_station"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "devitura-estate-arg-3181d6c02d0f06af",
-      "place": "Devitura Estate (ARG)",
-      "date": "2026-09-14",
-      "rain": 84.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "unknown_station"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "eladuwa-estate-arg-d5c7372149bd2df7",
-      "place": "Eladuwa Estate (ARG)",
-      "date": "2026-09-14",
-      "rain": 63.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "unknown_station"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "elahara",
-      "place": "Elahara",
-      "date": "2026-09-14",
-      "rain": 43.7,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "ellakanda-watta-arg-bace822941eabb12",
-      "place": "Ellakanda Watta (ARG)",
-      "date": "2026-09-14",
-      "rain": 76.5,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "unknown_station"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "galle",
-      "place": "Galle",
-      "date": "2026-09-14",
-      "rain": 131.7,
-      "min_temp": 23.6,
-      "max_temp": 29.4,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "hambantota",
-      "place": "Hambantota",
-      "date": "2026-09-14",
-      "rain": 1.0,
-      "min_temp": 26.4,
-      "max_temp": 33.1,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "handapanagala",
-      "place": "Handapanagala",
-      "date": "2026-09-14",
-      "rain": 58.6,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "inginiyagala",
-      "place": "Inginiyagala",
-      "date": "2026-09-14",
-      "rain": 0.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "jaffna",
-      "place": "Jaffna",
-      "date": "2026-09-14",
-      "rain": 7.7,
-      "min_temp": 26.6,
-      "max_temp": 36.3,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "kandaketiya",
-      "place": "Kandaketiya",
-      "date": "2026-09-14",
-      "rain": 98.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "katugastota",
-      "place": "Katugastota",
-      "date": "2026-09-14",
-      "rain": 4.8,
-      "min_temp": 22.5,
-      "max_temp": 31.2,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "katunayake",
-      "place": "Katunayake",
-      "date": "2026-09-14",
-      "rain": 3.0,
-      "min_temp": 26.8,
-      "max_temp": 31.3,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "kesbewa-arg-fb0288929b067908",
-      "place": "Kesbewa (ARG)",
-      "date": "2026-09-14",
-      "rain": 98.5,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "unknown_station"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "kotmale",
-      "place": "Kotmale",
-      "date": "2026-09-14",
-      "rain": 1.5,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "kukuleganaga",
-      "place": "Kukuleganaga",
-      "date": "2026-09-14",
-      "rain": 48.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "kurunegala",
-      "place": "Kurunegala",
-      "date": "2026-09-14",
-      "rain": 5.4,
-      "min_temp": 24.0,
-      "max_temp": 33.8,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "laxapana",
-      "place": "Laxapana",
-      "date": "2026-09-14",
-      "rain": 6.2,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "unknown_station"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "maha-illuppallama",
-      "place": "Maha Illuppallama",
-      "date": "2026-09-14",
-      "rain": 13.2,
-      "min_temp": 23.6,
-      "max_temp": 35.9,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "mannar",
-      "place": "Mannar",
-      "date": "2026-09-14",
-      "rain": 0.1,
-      "min_temp": 25.8,
-      "max_temp": 31.8,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "maskeliya-dom-b6d6a3352248f317",
       "place": "Maskeliya (DOM)",
-      "date": "2026-09-14",
-      "rain": 0.0,
+      "date": "2026-09-15",
+      "rain": 21.5,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -478,27 +478,27 @@
         "unknown_station"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "mattala",
       "place": "Mattala",
-      "date": "2026-09-14",
-      "rain": 0.1,
-      "min_temp": 25.7,
-      "max_temp": 36.3,
+      "date": "2026-09-15",
+      "rain": 16.8,
+      "min_temp": 24.8,
+      "max_temp": 35.1,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "maussakele",
       "place": "Maussakele",
-      "date": "2026-09-14",
-      "rain": 2.5,
+      "date": "2026-09-15",
+      "rain": 15.7,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -506,69 +506,55 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "minneriya",
-      "place": "Minneriya",
-      "date": "2026-09-14",
-      "rain": 113.4,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "moneragala",
       "place": "Moneragala",
-      "date": "2026-09-14",
-      "rain": 50.9,
-      "min_temp": 23.6,
-      "max_temp": 35.3,
+      "date": "2026-09-15",
+      "rain": 6.9,
+      "min_temp": 23.9,
+      "max_temp": 34.4,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "monrovia",
-      "place": "Monrovia",
-      "date": "2026-09-14",
-      "rain": 99.1,
+      "station_id": "moraliya-oya",
+      "place": "Moraliya-Oya",
+      "date": "2026-09-15",
+      "rain": 96.1,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
       "quality_flags": [
-        "coordinates_missing"
+        "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "mullaitivu",
       "place": "Mullaitivu",
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "rain": 0.0,
-      "min_temp": 26.0,
-      "max_temp": 32.7,
+      "min_temp": 25.6,
+      "max_temp": 33.0,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "norton",
       "place": "Norton",
-      "date": "2026-09-14",
-      "rain": 18.0,
+      "date": "2026-09-15",
+      "rain": 0.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -576,27 +562,27 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "nuwara-eliya",
       "place": "Nuwara Eliya",
-      "date": "2026-09-14",
-      "rain": 41.4,
-      "min_temp": 12.7,
-      "max_temp": 21.5,
+      "date": "2026-09-15",
+      "rain": 2.2,
+      "min_temp": 13.1,
+      "max_temp": 21.2,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "padukka-estate",
-      "place": "Padukka Estate",
-      "date": "2026-09-14",
-      "rain": 49.8,
+      "station_id": "palanda-arg",
+      "place": "Palanda(ARG)",
+      "date": "2026-09-15",
+      "rain": 81.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -604,13 +590,13 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "parangiyawadiya",
-      "place": "Parangiyawadiya",
-      "date": "2026-09-14",
-      "rain": 52.2,
+      "station_id": "pasyala",
+      "place": "Pasyala",
+      "date": "2026-09-15",
+      "rain": 94.7,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -618,55 +604,55 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "polonnaruwa",
       "place": "Polonnaruwa",
-      "date": "2026-09-14",
-      "rain": 1.7,
-      "min_temp": 24.1,
-      "max_temp": 38.6,
+      "date": "2026-09-15",
+      "rain": 0.0,
+      "min_temp": 25.0,
+      "max_temp": 35.5,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "pottuvil",
       "place": "Pottuvil",
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "rain": 0.0,
-      "min_temp": 25.7,
-      "max_temp": 33.5,
+      "min_temp": 26.1,
+      "max_temp": 33.6,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "puttalam",
       "place": "Puttalam",
-      "date": "2026-09-14",
-      "rain": 0.3,
-      "min_temp": 25.2,
-      "max_temp": 33.7,
+      "date": "2026-09-15",
+      "rain": 19.7,
+      "min_temp": 24.9,
+      "max_temp": 34.9,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "randenigala",
       "place": "Randenigala",
-      "date": "2026-09-14",
-      "rain": 2.2,
+      "date": "2026-09-15",
+      "rain": 0.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -674,13 +660,13 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "rantambe",
       "place": "Rantambe",
-      "date": "2026-09-14",
-      "rain": 1.0,
+      "date": "2026-09-15",
+      "rain": 0.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -688,41 +674,41 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "ratmalana",
       "place": "Ratmalana",
-      "date": "2026-09-14",
-      "rain": 10.4,
-      "min_temp": 26.6,
-      "max_temp": 32.4,
+      "date": "2026-09-15",
+      "rain": 62.1,
+      "min_temp": 23.4,
+      "max_temp": 32.6,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "ratnapura",
       "place": "Ratnapura",
-      "date": "2026-09-14",
-      "rain": 5.1,
-      "min_temp": 25.0,
-      "max_temp": 30.2,
+      "date": "2026-09-15",
+      "rain": 30.0,
+      "min_temp": 24.2,
+      "max_temp": 31.7,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "samanala-wawa",
       "place": "Samanala Wawa",
-      "date": "2026-09-14",
-      "rain": 0.0,
+      "date": "2026-09-15",
+      "rain": 55.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -730,13 +716,13 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "sirikandura-estate-arg-593690bb25a400b7",
-      "place": "Sirikandura Estate (ARG)",
-      "date": "2026-09-14",
-      "rain": 94.5,
+      "station_id": "thalduwa-estate-arg-5b9b522ff9c76715",
+      "place": "Thalduwa Estate (ARG)",
+      "date": "2026-09-15",
+      "rain": 108.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -744,41 +730,41 @@
         "unknown_station"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
-    },
-    {
-      "station_id": "spring-valley",
-      "place": "Spring Valley",
-      "date": "2026-09-14",
-      "rain": 56.0,
-      "min_temp": null,
-      "max_temp": null,
-      "trace_rain": false,
-      "quality_flags": [
-        "legacy_coordinates_unverified"
-      ],
-      "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "trincomalee",
       "place": "Trincomalee",
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "rain": 0.0,
-      "min_temp": 25.2,
-      "max_temp": 34.6,
+      "min_temp": 24.4,
+      "max_temp": 33.4,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "udugama-arg-fa58808032339ec6",
+      "place": "Udugama (ARG)",
+      "date": "2026-09-15",
+      "rain": 80.0,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "unknown_station"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "ukuwela",
       "place": "Ukuwela",
-      "date": "2026-09-14",
-      "rain": 8.9,
+      "date": "2026-09-15",
+      "rain": 13.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -786,13 +772,13 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "upper-kotmale",
       "place": "Upper Kotmale",
-      "date": "2026-09-14",
-      "rain": 3.1,
+      "date": "2026-09-15",
+      "rain": 9.4,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -800,27 +786,27 @@
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "vavuniya",
       "place": "Vavuniya",
-      "date": "2026-09-14",
-      "rain": 21.7,
-      "min_temp": 24.4,
-      "max_temp": 37.6,
+      "date": "2026-09-15",
+      "rain": 0.0,
+      "min_temp": 24.7,
+      "max_temp": 36.0,
       "trace_rain": false,
       "quality_flags": [
         "legacy_coordinates_unverified"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
       "station_id": "victoria",
       "place": "Victoria",
-      "date": "2026-09-14",
-      "rain": 35.6,
+      "date": "2026-09-15",
+      "rain": 1.2,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -828,13 +814,27 @@
         "unknown_station"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     },
     {
-      "station_id": "vithanakanda-estate-arg-0400e38608731acb",
-      "place": "Vithanakanda Estate (ARG)",
-      "date": "2026-09-14",
-      "rain": 78.5,
+      "station_id": "warakapola",
+      "place": "Warakapola",
+      "date": "2026-09-15",
+      "rain": 87.9,
+      "min_temp": null,
+      "max_temp": null,
+      "trace_rain": false,
+      "quality_flags": [
+        "legacy_coordinates_unverified"
+      ],
+      "parser_version": "meteo-v1",
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
+    },
+    {
+      "station_id": "wathupitiwala-arg-729fd719bdd361f3",
+      "place": "Wathupitiwala (ARG)",
+      "date": "2026-09-15",
+      "rain": 86.0,
       "min_temp": null,
       "max_temp": null,
       "trace_rain": false,
@@ -842,7 +842,7 @@
         "unknown_station"
       ],
       "parser_version": "meteo-v1",
-      "document_hash": "57a633f9d5fd0673dcf4c655f9d43c8539b0c7a371dd1551b9a095be5557bdc6"
+      "document_hash": "b5d1848f27b3a16fa81c928c4577b72bd37d159034dab490162ad6904bb74918"
     }
   ]
 }

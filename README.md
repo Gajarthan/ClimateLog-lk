@@ -12,19 +12,19 @@
 
 ## Weather snapshot
 
-**Report: 2026-09-14 · Period ending 08:30 SLST**
+**Report: 2026-09-15 · Period ending 08:30 SLST**
 
-Captured 14 Sep 2026 · 15:32 SLST from the Department of Meteorology.
+Captured 15 Sep 2026 · 15:01 SLST from the Department of Meteorology.
 
 > This is a published snapshot, not a live feed. The date above identifies the data shown. Values are accurate to the report date shown.
 
-![Weather overview for 2026-09-14: 60 station readings](docs/dashboard/overview.svg)
+![Weather overview for 2026-09-15: 60 station readings](docs/dashboard/overview.svg)
 
 [Download observations](docs/dashboard/snapshot.json) · [View archived source PDF](docs/dashboard/report.pdf) · [Official source](https://meteo.gov.lk/)
 
 ## Sri Lanka map
 
-![Sri Lanka station map with rainfall and daily maximum temperatures for 2026-09-14](docs/dashboard/sri-lanka-map.png)
+![Sri Lanka station map with rainfall and daily maximum temperatures for 2026-09-15](docs/dashboard/sri-lanka-map.png)
 
 Markers show stations matched to published historical coordinates. Unmatched locations are omitted, not estimated. The map labels rainfall and maximum temperature; all 60 readings remain available below. [Map sources and location notes](docs/dashboard/MAP_SOURCES.md).
 
@@ -60,7 +60,7 @@ Each line connects one station's daily minimum and maximum. Only stations with b
 | Maximum temperature | 24 / 60 | 36 |
 | Paired temperatures | 24 / 60 | 36 |
 
-**0 trace-rain readings** · **11 unresolved station identities** · **47 rows with unverified historical coordinates**
+**0 trace-rain readings** · **14 unresolved station identities** · **44 rows with unverified historical coordinates**
 
 Missing readings are shown as **—**. Zero is a measured value; **Trace** is retained separately. Coverage describes this report, not the entire national station network. Station and coordinate flags remain available in the observation download. The map uses a separate published reference catalog; its historical positions do not verify current instrument locations.
 
@@ -71,66 +71,66 @@ Missing readings are shown as **—**. Zero is a measured value; **Trace** is re
 
 | Station | Rain (mm) | Minimum (°C) | Maximum (°C) |
 | --- | ---: | ---: | ---: |
-| . Devidson TF (ARG) | 45.0 | — | — |
-| Ambewela | 41.0 | — | — |
-| Anuradhapura | 12.4 | 25.1 | 36.3 |
-| Badulla | 5.9 | 20.7 | 30.5 |
-| Balapitiya | 117.4 | — | — |
-| Bandaragama | 147.3 | — | — |
-| Bandaragama (ARG) | 147.0 | — | — |
-| Bandarawela | 40.3 | 17.7 | 24.8 |
-| Batticaloa | 0.0 | 26.0 | 34.1 |
-| Benthotawatta | 114.6 | — | — |
-| Bowatenna | 69.0 | — | — |
-| Canyon | 11.0 | — | — |
-| Castlereigh | 2.5 | — | — |
-| Colombo | 0.7 | 27.3 | 31.2 |
-| Devitura Estate (ARG) | 84.0 | — | — |
-| Eladuwa Estate (ARG) | 63.0 | — | — |
-| Elahara | 43.7 | — | — |
-| Ellakanda Watta (ARG) | 76.5 | — | — |
-| Galle | 131.7 | 23.6 | 29.4 |
-| Hambantota | 1.0 | 26.4 | 33.1 |
-| Handapanagala | 58.6 | — | — |
-| Inginiyagala | 0.0 | — | — |
-| Jaffna | 7.7 | 26.6 | 36.3 |
-| Kandaketiya | 98.0 | — | — |
-| Katugastota | 4.8 | 22.5 | 31.2 |
-| Katunayake | 3.0 | 26.8 | 31.3 |
-| Kesbewa (ARG) | 98.5 | — | — |
-| Kotmale | 1.5 | — | — |
-| Kukuleganaga | 48.0 | — | — |
-| Kurunegala | 5.4 | 24.0 | 33.8 |
-| Laxapana | 6.2 | — | — |
-| Maha Illuppallama | 13.2 | 23.6 | 35.9 |
-| Mannar | 0.1 | 25.8 | 31.8 |
-| Maskeliya (DOM) | 0.0 | — | — |
-| Mattala | 0.1 | 25.7 | 36.3 |
-| Maussakele | 2.5 | — | — |
-| Minneriya | 113.4 | — | — |
-| Moneragala | 50.9 | 23.6 | 35.3 |
-| Monrovia | 99.1 | — | — |
-| Mullaitivu | 0.0 | 26.0 | 32.7 |
-| Norton | 18.0 | — | — |
-| Nuwara Eliya | 41.4 | 12.7 | 21.5 |
-| Padukka Estate | 49.8 | — | — |
-| Parangiyawadiya | 52.2 | — | — |
-| Polonnaruwa | 1.7 | 24.1 | 38.6 |
-| Pottuvil | 0.0 | 25.7 | 33.5 |
-| Puttalam | 0.3 | 25.2 | 33.7 |
-| Randenigala | 2.2 | — | — |
-| Rantambe | 1.0 | — | — |
-| Ratmalana | 10.4 | 26.6 | 32.4 |
-| Ratnapura | 5.1 | 25.0 | 30.2 |
-| Samanala Wawa | 0.0 | — | — |
-| Sirikandura Estate (ARG) | 94.5 | — | — |
-| Spring Valley | 56.0 | — | — |
-| Trincomalee | 0.0 | 25.2 | 34.6 |
-| Ukuwela | 8.9 | — | — |
-| Upper Kotmale | 3.1 | — | — |
-| Vavuniya | 21.7 | 24.4 | 37.6 |
-| Victoria | 35.6 | — | — |
-| Vithanakanda Estate (ARG) | 78.5 | — | — |
+| Anuradhapura | 0.0 | 24.7 | 35.1 |
+| Awissawella | 114.2 | — | — |
+| Badulla | 0.0 | 20.8 | 30.2 |
+| Bandarawela | 39.8 | 18.1 | 25.4 |
+| Batticaloa | 0.8 | 26.4 | 32.6 |
+| Batuwangala | 111.5 | — | — |
+| Benthotawatta | 134.5 | — | — |
+| Bowatenna | 5.4 | — | — |
+| Canyon | 15.8 | — | — |
+| Castlereigh | 9.0 | — | — |
+| Colombo | 25.2 | 24.4 | 31.6 |
+| Dunumale Estate (ARG) | 91.5 | — | — |
+| Eladuwa Estate (ARG) | 118.5 | — | — |
+| Ellakanda Watta (ARG) | 96.5 | — | — |
+| Galle | 25.2 | 25.4 | 28.8 |
+| Halwathura Estate (ARG) | 123.5 | — | — |
+| Hambantota | 4.1 | 25.6 | 31.7 |
+| Inginiyagala | 12.0 | — | — |
+| Jaffna | 3.4 | 25.3 | 33.5 |
+| Katugastota | 16.0 | 22.7 | 32.2 |
+| Katunayake | 33.9 | 24.6 | 31.1 |
+| Keenagahawila (ARG) | 114.5 | — | — |
+| Keselhenawa (ARG) | 80.5 | — | — |
+| Kethendola | 88.5 | — | — |
+| Kirindiwela (ARG) | 147.0 | — | — |
+| Kotmale | 0.0 | — | — |
+| Kukuleganaga | 36.0 | — | — |
+| Kuliyapitiya | 79.0 | — | — |
+| Kurunegala | 0.4 | 24.3 | 35.2 |
+| Laxapana | 6.4 | — | — |
+| Madolthenna Estate (ARG) | 109.5 | — | — |
+| Maha Illuppallama | 6.9 | 23.7 | 35.6 |
+| Mannar | 0.0 | 25.3 | 34.1 |
+| Maskeliya (DOM) | 21.5 | — | — |
+| Mattala | 16.8 | 24.8 | 35.1 |
+| Maussakele | 15.7 | — | — |
+| Moneragala | 6.9 | 23.9 | 34.4 |
+| Moraliya-Oya | 96.1 | — | — |
+| Mullaitivu | 0.0 | 25.6 | 33.0 |
+| Norton | 0.0 | — | — |
+| Nuwara Eliya | 2.2 | 13.1 | 21.2 |
+| Palanda(ARG) | 81.0 | — | — |
+| Pasyala | 94.7 | — | — |
+| Polonnaruwa | 0.0 | 25.0 | 35.5 |
+| Pottuvil | 0.0 | 26.1 | 33.6 |
+| Puttalam | 19.7 | 24.9 | 34.9 |
+| Randenigala | 0.0 | — | — |
+| Rantambe | 0.0 | — | — |
+| Ratmalana | 62.1 | 23.4 | 32.6 |
+| Ratnapura | 30.0 | 24.2 | 31.7 |
+| Samanala Wawa | 55.0 | — | — |
+| Thalduwa Estate (ARG) | 108.0 | — | — |
+| Trincomalee | 0.0 | 24.4 | 33.4 |
+| Udugama (ARG) | 80.0 | — | — |
+| Ukuwela | 13.0 | — | — |
+| Upper Kotmale | 9.4 | — | — |
+| Vavuniya | 0.0 | 24.7 | 36.0 |
+| Victoria | 1.2 | — | — |
+| Warakapola | 87.9 | — | — |
+| Wathupitiwala (ARG) | 86.0 | — | — |
 
 </details>
 
